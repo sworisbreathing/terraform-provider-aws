@@ -15883,6 +15883,9 @@ var awsPartition = partition{
 					Region: "ap-southeast-2",
 				}: endpoint{},
 				endpointKey{
+					Region: "ap-southeast-3",
+				}: endpoint{},
+				endpointKey{
 					Region: "ca-central-1",
 				}: endpoint{},
 				endpointKey{
@@ -24204,6 +24207,18 @@ var awsPartition = partition{
 		"workspaces-web": service{
 			Endpoints: serviceEndpoints{
 				endpointKey{
+					Region: "ap-northeast-1",
+				}: endpoint{},
+				endpointKey{
+					Region: "ap-south-1",
+				}: endpoint{},
+				endpointKey{
+					Region: "ap-southeast-1",
+				}: endpoint{},
+				endpointKey{
+					Region: "ap-southeast-2",
+				}: endpoint{},
+				endpointKey{
 					Region: "eu-west-1",
 				}: endpoint{},
 				endpointKey{
@@ -25071,8 +25086,20 @@ var awscnPartition = partition{
 					Region: "cn-north-1",
 				}: endpoint{},
 				endpointKey{
+					Region:  "cn-north-1",
+					Variant: dualStackVariant,
+				}: endpoint{
+					Hostname: "firehose.cn-north-1.api.amazonwebservices.com.cn",
+				},
+				endpointKey{
 					Region: "cn-northwest-1",
 				}: endpoint{},
+				endpointKey{
+					Region:  "cn-northwest-1",
+					Variant: dualStackVariant,
+				}: endpoint{
+					Hostname: "firehose.cn-northwest-1.api.amazonwebservices.com.cn",
+				},
 			},
 		},
 		"fms": service{
@@ -31740,6 +31767,9 @@ var awsisoPartition = partition{
 			Endpoints: serviceEndpoints{
 				endpointKey{
 					Region: "us-iso-east-1",
+				}: endpoint{},
+				endpointKey{
+					Region: "us-iso-west-1",
 				}: endpoint{},
 			},
 		},
