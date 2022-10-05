@@ -32,7 +32,7 @@ jobs:
     name: go mod download
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3.1.0
       - uses: actions/setup-go@v3
         with:
           go-version-file: .go-version
@@ -51,7 +51,7 @@ jobs:
     needs: [go_mod_download]
     runs-on: [custom, linux, medium]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3.1.0
       - uses: actions/cache@v3
         continue-on-error: true
         id: cache-terraform-plugin-dir
@@ -87,7 +87,7 @@ jobs:
     needs: [go_build]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3.1.0
       - uses: actions/setup-go@v3
         with:
           go-version-file: .go-version
@@ -119,7 +119,7 @@ jobs:
     needs: [go_build]
     runs-on: [custom, linux, medium]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3.1.0
         with:
           fetch-depth: 0
       - uses: actions/setup-go@v3
@@ -148,7 +148,7 @@ jobs:
     needs: [go_build]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3.1.0
       - uses: actions/setup-go@v3
         with:
           go-version-file: .go-version
@@ -176,7 +176,7 @@ jobs:
     needs: [go_build]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3.1.0
         with:
           fetch-depth: 0
       - uses: actions/setup-go@v3
@@ -206,7 +206,7 @@ jobs:
     needs: [go_build]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3.1.0
       - uses: actions/cache@v3
         continue-on-error: true
         id: cache-terraform-providers-schema
@@ -241,7 +241,7 @@ jobs:
     needs: [terraform_providers_schema]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3.1.0
       - uses: actions/setup-go@v3
         with:
           go-version-file: .go-version
